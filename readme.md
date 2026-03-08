@@ -7,22 +7,12 @@ This project is based on a Kaggle competition about predicting whether a bank cl
 The dataset comes from a Portuguese banking institution marketing campaign.  
 Each record represents a client contacted during a campaign, and the goal is to build a machine learning model to predict whether the client will subscribe to a term deposit (`yes` / `no`).  
 
-This is a **binary classification problem** commonly used in data science competitions to evaluate feature engineering, preprocessing, and model selection.
-
 Dataset characteristics:
 
 - Mixed categorical & numerical features
 - Imbalanced target variable
 - Real-world marketing data
 - Evaluation based on prediction accuracy / probability
-
-This project includes:
-
-- Data preprocessing
-- Feature engineering
-- Model training
-- Prediction generation
-- Output submission files
 
 Reference: Bank Marketing Dataset / Kaggle competition / UCI dataset  
 The data is related to direct marketing campaigns of a Portuguese bank where the goal is to predict if the client will subscribe a term deposit.  
@@ -78,57 +68,37 @@ pip install -r requirements.txt
 
 Prediction results are saved in: `output/`
 
+Stacking Evaluation
+<img src="output/stacking_model_evaluation.png" width="400">
 
+<table> <tr> <td align="center">
 
-📈 Methods Used
+SHAP Summary v2
+<img src="output/shap_summary_v2.png" width="400">
 
-Data cleaning
+</td> </tr> <tr> <td align="center">
 
-Encoding categorical features
+SHAP Summary v4
+<img src="output/shap_summary_v4.png" width="400">
 
-Feature selection
+</td> </tr> </table>
 
-Model training
-
-Possible models:
-
-Logistic Regression
-
-Random Forest
-
-XGBoost
-
-SVM
-
-Neural Network
-
-📊 Evaluation
-
-Evaluation metric depends on competition:
-
-Accuracy
-
-ROC-AUC
-
-F1-score
-
-LogLoss
-
-Goal:
-
-Maximize prediction performance on unseen test data
+Metrics | Score
+:---:|:---:
+accuracy |0.9205
+roc_auc|0.9382
+f1| 0.9159
+precision| 0.9144
+recall| 0.9205
+log_loss| 0.1968
 
 💡 Future Improvements
 
-Hyperparameter tuning
-
-Cross validation
-
-Ensemble models
-
-Feature engineering
-
-Handling imbalance
+- Hyperparameter tuning
+- Cross validation
+- Ensemble models
+- Feature engineering
+- Handling imbalance
 
 👤 Author
 
